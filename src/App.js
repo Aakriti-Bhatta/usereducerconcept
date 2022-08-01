@@ -1,11 +1,9 @@
 
-
+function Counter(){
+  return <button>Inc</button>
+}
 function App() {
-  return (
-    <div className="App">
-     
-    </div>
-  );
+  return <Counter/>
 }
 
 export default App;
