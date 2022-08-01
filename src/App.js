@@ -1,7 +1,18 @@
 import * as React from "react";
 
 function countReducer(state, action) {
-  return state;
+  const { type, step } = action;
+  switch (type) {
+    case 'increment': {
+      return {
+        ...state,
+        count: state.count + step,
+      };
+    }
+    default: {
+      throw new Error(`Unsupported action type: ${type}`);
+    }
+  }
 }
 
 function Counter({ initialCount = 0, step = 1 }) {
